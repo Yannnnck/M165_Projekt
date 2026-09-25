@@ -1,0 +1,10 @@
+const before=process.env.EVENTHUB_OLD_PRIMARY;
+const after=db.hello().primary;
+if(!after||before===after) throw new Error('Kein neuer Primary.');
+const id=ObjectId(process.env.EVENTHUB_PROBE_ID);
+if(!db.artists.findOne({_id:id})) throw new Error('Bestätigtes Dokument fehlt nach Failover.');
+const result=db.artists.updateOne({_id:id},{$set:{genre:'Nach Failover geschrieben'}},{writeConcern:{w:'majority'}});
+if(result.modifiedCount!==1) throw new Error('Schreiben nach Failover fehlgeschlagen.');
+print(`PASS | Primary gewechselt: ${before} -> ${after}`);
+print('PASS | Vorher bestätigtes Dokument erhalten; neuer majority-Schreibzugriff erfolgreich.');
+db.artists.deleteOne({_id:id});

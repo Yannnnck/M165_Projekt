@@ -1,0 +1,10 @@
+print('1. Zukünftige Events an einer Location ($gte):');
+printjson(db.events.find({locationId:ObjectId('000000000000000000000065'),date:{$gte:new Date()}},{title:1,date:1}).toArray());
+print('2. Freie VIP-Tickets bis CHF 150 ($elemMatch, $gt, $lte):');
+printjson(db.events.find({status:'geplant',categories:{$elemMatch:{name:'VIP',available:{$gt:0},price:{$lte:NumberDecimal('150')}}}},{title:1,categories:1}).toArray());
+print('3. Textsuche nach Rock:');
+printjson(db.events.find({$text:{$search:'Rock'}},{title:1,score:{$meta:'textScore'}}).sort({score:{$meta:'textScore'}}).toArray());
+print('4. Bezahlte Buchungen mit mindestens 2 Tickets ($gte):');
+printjson(db.bookings.find({status:'bezahlt',quantity:{$gte:2}}).limit(5).toArray());
+print('5. Bewertungen mit mindestens 4 Sternen:');
+printjson(db.reviews.find({rating:{$gte:4}}).toArray());
