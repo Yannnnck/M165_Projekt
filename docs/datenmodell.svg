@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" role="img" aria-labelledby="title desc">
+  <title id="title">EventHub: sieben Collections und ihre Referenzen</title>
+  <desc id="desc">Events referenzieren Locations, Künstler und Veranstalter. Kategorien sind im Event eingebettet. Buchungen und Bewertungen referenzieren Events und Kunden.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#52657a" stroke-width="1.5"/></marker>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; fill: #20344b; }
+      .box { fill: #ffffff; stroke: #bac9d7; stroke-width: 1.5; rx: 12; }
+      .head { font-size: 21px; font-weight: 700; }
+      .field { font-size: 16px; }
+      .note { font-size: 14px; fill: #52657a; }
+      .edge { fill: none; stroke: #52657a; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1120" height="820" fill="#f2f6fa"/>
+  <text x="40" y="43" font-size="26" font-weight="700">EventHub · Datenmodell</text>
+  <text x="40" y="69" class="note">Pfeilrichtung: gespeicherte Referenz → Zieldokument · alle IDs sind ObjectIds</text>
+  <rect class="box" x="40" y="100" width="300" height="140"/>
+  <text class="head" x="60" y="133">locations</text>
+  <text class="field" x="60" y="161">_id · name · capacity</text>
+  <text class="field" x="60" y="187">address { street, city, postalCode }</text>
+  <text class="field" x="60" y="213">equipment [ ]</text>
+  <rect class="box" x="410" y="100" width="300" height="140"/>
+  <text class="head" x="430" y="133">artists</text>
+  <text class="field" x="430" y="166">_id · name · genre</text>
+  <text class="note" x="430" y="203">Ein Künstler: mehrere Events</text>
+  <rect class="box" x="780" y="100" width="300" height="140"/>
+  <text class="head" x="800" y="133">organizers</text>
+  <text class="field" x="800" y="166">_id · name · email</text>
+  <text class="note" x="800" y="203">Ein Veranstalter: mehrere Events</text>
+  <path class="edge" d="M450 315 L190 260 L190 240"/>
+  <path class="edge" d="M560 295 L560 240"/>
+  <path class="edge" d="M670 315 L930 260 L930 240"/>
+  <text class="note" x="240" y="276">locationId (n:1)</text>
+  <text class="note" x="574" y="276">artistIds (n:m)</text>
+  <text class="note" x="760" y="276">organizerId (n:1)</text>
+  <rect x="365" y="295" width="390" height="235" rx="12" fill="#e7f4f2" stroke="#2c887c" stroke-width="2"/>
+  <text class="head" x="385" y="330">events</text>
+  <text class="field" x="385" y="359">_id · title · description · date · status</text>
+  <text class="field" x="385" y="386">locationId · artistIds [ ] · organizerId</text>
+  <rect x="385" y="404" width="350" height="106" rx="7" fill="#fff" stroke="#7eb7ae"/>
+  <text class="field" x="402" y="431" font-weight="700">categories [1–3] · eingebettet</text>
+  <text class="field" x="402" y="458">name · price · capacity</text>
+  <text class="field" x="402" y="485">available · reserved · sold</text>
+  <rect class="box" x="40" y="405" width="285" height="200"/>
+  <text class="head" x="60" y="440">bookings</text>
+  <text class="field" x="60" y="471">_id · customerId · eventId</text>
+  <text class="field" x="60" y="498">category · quantity · unitPrice</text>
+  <text class="field" x="60" y="525">bookedAt · status</text>
+  <text class="note" x="60" y="565">Eigenständige, wachsende Daten</text>
+  <path class="edge" d="M325 430 L365 430"/>
+  <text class="note" x="237" y="392">eventId (n:1)</text>
+  <rect class="box" x="795" y="405" width="285" height="200"/>
+  <text class="head" x="815" y="440">reviews</text>
+  <text class="field" x="815" y="471">_id · customerId · eventId</text>
+  <text class="field" x="815" y="498">rating · comment · createdAt</text>
+  <text class="note" x="815" y="548">Unique: eventId + customerId</text>
+  <path class="edge" d="M795 430 L755 430"/>
+  <text class="note" x="795" y="392">eventId (n:1)</text>
+  <rect class="box" x="365" y="635" width="390" height="130"/>
+  <text class="head" x="385" y="670">customers</text>
+  <text class="field" x="385" y="701">_id · firstName · lastName · email · phone</text>
+  <text class="note" x="385" y="738">Buchungen über bookings.customerId abfragen</text>
+  <path class="edge" d="M180 605 L180 693 L365 693"/>
+  <text class="note" x="54" y="651">customerId (n:1)</text>
+  <path class="edge" d="M940 605 L940 693 L755 693"/>
+  <text class="note" x="955" y="651">customerId (n:1)</text>
+  <text class="note" x="40" y="799">Zählerregel je Kategorie: capacity = available + reserved + sold · Geld: Decimal128 (CHF) · Zeitpunkte: UTC</text>
+</svg>

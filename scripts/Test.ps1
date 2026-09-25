@@ -20,4 +20,9 @@ try {
     Invoke-Mongo 'mongodb/09-verify.js'
     Write-Host 'GESAMTPRÜFUNG BESTANDEN.'
     } | Out-Host
-} finally { Stop-Transcript | Out-Null }
+} finally {
+    Stop-Transcript | Out-Null
+    # PowerShell fügt im Kopf Leerzeichen an; für saubere Git-Diffs entfernen.
+    $lines = Get-Content $report | ForEach-Object { $_.TrimEnd() }
+    $lines | Set-Content $report -Encoding UTF8
+}

@@ -1,0 +1,70 @@
+**********************
+PowerShell transcript start
+Start time: 20260925170756
+Username: YANNICK\Yannick
+RunAs User: YANNICK\Yannick
+Configuration Name:
+Machine: YANNICK (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\Yannick\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Start-Transcript -Path docs/evidence/lifecycle.txt -Force | Out-Null; try { & { .\scripts\Stop.ps1; .\scripts\Setup.ps1; .\scripts\Run.ps1 --report; Write-Host 'STOP/START UND C#-ZUGRIFF BESTANDEN.' } | Out-Host } finally { Stop-Transcript | Out-Null }
+Process ID: 1896
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Shutdown angefordert: 27101
+Shutdown angefordert: 27102
+Shutdown angefordert: 27103
+Replica Set bereit, Primary: localhost:27102
+PASS | Drei gesunde Knoten (Primary/Secondary).
+Schema-Validierung: 7 Collections eingerichtet.
+Testdaten bereits vorhanden: übersprungen.
+7 Indexe erstellt (zusätzlich zu _id).
+[
+  {
+    user: 'admin',
+    roles: [
+      {
+        role: 'root',
+        db: 'admin'
+      }
+    ]
+  },
+  {
+    user: 'report',
+    roles: [
+      {
+        role: 'read',
+        db: 'eventhub'
+      }
+    ]
+  },
+  {
+    user: 'sales',
+    roles: [
+      {
+        role: 'readWrite',
+        db: 'eventhub'
+      }
+    ]
+  }
+]
+EventHub bereit. Start: .\scripts\Run.ps1
+
+Umsatz pro Event | nur bezahlte Buchungen | CHF
+Alpine Rock Festival           | Tickets   45 | CHF       4050
+Kammermusik Gala               | Tickets   30 | CHF       2930
+Neon Pop Night                 | Tickets   32 | CHF       2720
+Jazz am Rhein Rückblick        | Tickets   18 | CHF       1405
+Electronic River               | Tickets   15 | CHF       1355
+STOP/START UND C#-ZUGRIFF BESTANDEN.
+**********************
+PowerShell transcript end
+End time: 20260925170821
+**********************

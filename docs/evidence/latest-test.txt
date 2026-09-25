@@ -1,0 +1,770 @@
+**********************
+PowerShell transcript start
+Start time: 20260925170124
+Username: YANNICK\Yannick
+RunAs User: YANNICK\Yannick
+Configuration Name:
+Machine: YANNICK (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\Yannick\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+.\scripts\Test.ps1 *> .local/test-console.txt; if ($?) { Get-Content .local/test-console.txt -Tail 8 }
+Process ID: 7940
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+  Wiederherzustellende Projekte werden ermittelt...
+  "C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\src\EventHub\EventHub.csproj" wiederhergestellt (in 186 ms.).
+  EventHub -> C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\src\EventHub\bin\Debug\net10.0\EventHub.dll
+
+Der Buildvorgang wurde erfolgreich ausgeführt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:00.92
+PASS | events: Mindestanzahl 6
+PASS | locations: Mindestanzahl 3
+PASS | artists: Mindestanzahl 10
+PASS | organizers: Mindestanzahl 2
+PASS | customers: Mindestanzahl 30
+PASS | bookings: Mindestanzahl 120
+PASS | reviews: Mindestanzahl 5
+PASS | Jazz am Rhein Rückblick: Location und Veranstalter existieren
+PASS | Jazz am Rhein Rückblick: Künstler existieren
+PASS | Jazz am Rhein Rückblick: Kapazität passt zur Location
+PASS | Jazz am Rhein Rückblick/Stehplatz: Bestand konsistent
+PASS | Jazz am Rhein Rückblick/Sitzplatz: Bestand konsistent
+PASS | Jazz am Rhein Rückblick/VIP: Bestand konsistent
+PASS | Neon Pop Night: Location und Veranstalter existieren
+PASS | Neon Pop Night: Künstler existieren
+PASS | Neon Pop Night: Kapazität passt zur Location
+PASS | Neon Pop Night/Stehplatz: Bestand konsistent
+PASS | Neon Pop Night/Sitzplatz: Bestand konsistent
+PASS | Neon Pop Night/VIP: Bestand konsistent
+PASS | Alpine Rock Festival: Location und Veranstalter existieren
+PASS | Alpine Rock Festival: Künstler existieren
+PASS | Alpine Rock Festival: Kapazität passt zur Location
+PASS | Alpine Rock Festival/Stehplatz: Bestand konsistent
+PASS | Alpine Rock Festival/Sitzplatz: Bestand konsistent
+PASS | Alpine Rock Festival/VIP: Bestand konsistent
+PASS | Electronic River: Location und Veranstalter existieren
+PASS | Electronic River: Künstler existieren
+PASS | Electronic River: Kapazität passt zur Location
+PASS | Electronic River/Stehplatz: Bestand konsistent
+PASS | Electronic River/Sitzplatz: Bestand konsistent
+PASS | Electronic River/VIP: Bestand konsistent
+PASS | Kammermusik Gala: Location und Veranstalter existieren
+PASS | Kammermusik Gala: Künstler existieren
+PASS | Kammermusik Gala: Kapazität passt zur Location
+PASS | Kammermusik Gala/Stehplatz: Bestand konsistent
+PASS | Kammermusik Gala/Sitzplatz: Bestand konsistent
+PASS | Kammermusik Gala/VIP: Bestand konsistent
+PASS | Sommerklang abgesagt: Location und Veranstalter existieren
+PASS | Sommerklang abgesagt: Künstler existieren
+PASS | Sommerklang abgesagt: Kapazität passt zur Location
+PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/VIP: Bestand konsistent
+PASS | Alle Buchungsreferenzen gültig
+PASS | Bewertungen gehören zu besuchten vergangenen Events
+PASS | events: ungültiges Dokument mit Fehler 121 abgewiesen
+PASS | bookings: ungültiges Dokument mit Fehler 121 abgewiesen
+PASS | customers: ungültiges Dokument mit Fehler 121 abgewiesen
+DATEN- UND SCHEMATESTS BESTANDEN.
+CREATE: insertOne + insertMany
+READ: findOne + find
+{
+  _id: ObjectId('6ab68cc6364b21040847e0c7'),
+  name: 'CRUD Demo Solo',
+  genre: 'Pop'
+}
+[
+  {
+    _id: ObjectId('6ab68cc6364b21040847e0c8'),
+    name: 'CRUD Demo Duo',
+    genre: 'Rock'
+  },
+  {
+    _id: ObjectId('6ab68cc6364b21040847e0c9'),
+    name: 'CRUD Demo Trio',
+    genre: 'Jazz'
+  }
+]
+UPDATE: updateOne + updateMany
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+DELETE: deleteOne + deleteMany
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+{
+  acknowledged: true,
+  deletedCount: 2
+}
+PASS | Reporting liest 6 Events.
+PASS | Reporting-Schreibzugriff mit Unauthorized (13) abgewiesen.
+PASS | Verkauf darf Daten schreiben.
+PASS | Verkauf darf Benutzer nicht auflisten.
+PASS | Rollback nach Insert
+PASS | Rollback: Bestand unverändert
+PASS | Rollback: keine Buchung gespeichert
+PASS | Unbekannter Kunde abgewiesen
+PASS | Null Tickets abgewiesen
+PASS | Unbekannte Kategorie abgewiesen
+PASS | Parallelbuchung: genau 3 von 10 erfolgreich
+PASS | Kein Überverkauf, Status ausverkauft
+PASS | Storno gibt Platz frei und öffnet Event
+PASS | Doppeltes Storno abgewiesen
+PASS | Reservierung zählt separat
+PASS | Bezahlen verschiebt reserviert zu verkauft
+PASS | Doppelte Zahlung abgewiesen
+PASS | Zukünftiges Event nicht bewertbar
+PASS | Bewertung nach Durchführung gespeichert
+PASS | Doppelte Bewertung verhindert
+PASS | Vergangenes Event nicht buchbar
+PASS | Schema weist ungültige Buchung ab
+PASS | E-Mail-Unique-Index geprüft
+PASS | Paginierung ohne Überschneidung
+PASS | Aggregation: exakt CHF 150 für drei bezahlte Tickets
+ALLE .NET-INTEGRATIONSTESTS BESTANDEN.
+1. Zukünftige Events an einer Location ($gte):
+[
+  {
+    _id: ObjectId('0000000000000000000001f5'),
+    title: 'Neon Pop Night',
+    date: ISODate('2026-11-09T14:53:10.558Z')
+  },
+  {
+    _id: ObjectId('0000000000000000000001f8'),
+    title: 'Kammermusik Gala',
+    date: ISODate('2026-12-24T14:53:10.558Z')
+  }
+]
+2. Freie VIP-Tickets bis CHF 150 ($elemMatch, $gt, $lte):
+[
+  {
+    _id: ObjectId('0000000000000000000001f5'),
+    title: 'Neon Pop Night',
+    categories: [
+      {
+        name: 'Stehplatz',
+        price: Decimal128('50'),
+        capacity: 300,
+        available: 288,
+        reserved: 2,
+        sold: 10
+      },
+      {
+        name: 'Sitzplatz',
+        price: Decimal128('85'),
+        capacity: 200,
+        available: 186,
+        reserved: 2,
+        sold: 12
+      },
+      {
+        name: 'VIP',
+        price: Decimal128('120'),
+        capacity: 50,
+        available: 38,
+        reserved: 2,
+        sold: 10
+      }
+    ]
+  },
+  {
+    _id: ObjectId('0000000000000000000001f6'),
+    title: 'Alpine Rock Festival',
+    categories: [
+      {
+        name: 'Stehplatz',
+        price: Decimal128('55'),
+        capacity: 300,
+        available: 282,
+        reserved: 3,
+        sold: 15
+      },
+      {
+        name: 'Sitzplatz',
+        price: Decimal128('90'),
+        capacity: 200,
+        available: 182,
+        reserved: 3,
+        sold: 15
+      },
+      {
+        name: 'VIP',
+        price: Decimal128('125'),
+        capacity: 50,
+        available: 32,
+        reserved: 3,
+        sold: 15
+      }
+    ]
+  },
+  {
+    _id: ObjectId('0000000000000000000001f7'),
+    title: 'Electronic River',
+    categories: [
+      {
+        name: 'Stehplatz',
+        price: Decimal128('60'),
+        capacity: 300,
+        available: 293,
+        reserved: 1,
+        sold: 6
+      },
+      {
+        name: 'Sitzplatz',
+        price: Decimal128('95'),
+        capacity: 200,
+        available: 194,
+        reserved: 1,
+        sold: 5
+      },
+      {
+        name: 'VIP',
+        price: Decimal128('130'),
+        capacity: 50,
+        available: 45,
+        reserved: 1,
+        sold: 4
+      }
+    ]
+  }
+]
+3. Textsuche nach Rock:
+[
+  {
+    _id: ObjectId('0000000000000000000001f6'),
+    title: 'Alpine Rock Festival',
+    score: 1.25
+  }
+]
+4. Bezahlte Buchungen mit mindestens 2 Tickets ($gte):
+[
+  {
+    _id: ObjectId('0000000000000000000003e9'),
+    customerId: ObjectId('000000000000000000000191'),
+    eventId: ObjectId('0000000000000000000001f5'),
+    category: 'Stehplatz',
+    quantity: 2,
+    unitPrice: Decimal128('50'),
+    bookedAt: ISODate('2026-07-28T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003ea'),
+    customerId: ObjectId('000000000000000000000192'),
+    eventId: ObjectId('0000000000000000000001f6'),
+    category: 'Stehplatz',
+    quantity: 3,
+    unitPrice: Decimal128('55'),
+    bookedAt: ISODate('2026-07-29T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003ec'),
+    customerId: ObjectId('000000000000000000000194'),
+    eventId: ObjectId('0000000000000000000001f8'),
+    category: 'Stehplatz',
+    quantity: 2,
+    unitPrice: Decimal128('65'),
+    bookedAt: ISODate('2026-07-31T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003f0'),
+    customerId: ObjectId('000000000000000000000198'),
+    eventId: ObjectId('0000000000000000000001f6'),
+    category: 'Sitzplatz',
+    quantity: 3,
+    unitPrice: Decimal128('90'),
+    bookedAt: ISODate('2026-08-04T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003f2'),
+    customerId: ObjectId('00000000000000000000019a'),
+    eventId: ObjectId('0000000000000000000001f8'),
+    category: 'Sitzplatz',
+    quantity: 2,
+    unitPrice: Decimal128('100'),
+    bookedAt: ISODate('2026-08-06T14:53:10.558Z'),
+    status: 'bezahlt'
+  }
+]
+5. Bewertungen mit mindestens 4 Sternen:
+[
+  {
+    _id: ObjectId('0000000000000000000007d1'),
+    customerId: ObjectId('000000000000000000000196'),
+    eventId: ObjectId('0000000000000000000001f4'),
+    rating: 4,
+    comment: 'Guter Sound und freundliches Team.',
+    createdAt: ISODate('2026-09-05T14:53:10.558Z')
+  },
+  {
+    _id: ObjectId('0000000000000000000007d2'),
+    customerId: ObjectId('00000000000000000000019c'),
+    eventId: ObjectId('0000000000000000000001f4'),
+    rating: 5,
+    comment: 'Sehr schönes Konzert.',
+    createdAt: ISODate('2026-09-05T14:53:10.558Z')
+  },
+  {
+    _id: ObjectId('0000000000000000000007d4'),
+    customerId: ObjectId('0000000000000000000001a8'),
+    eventId: ObjectId('0000000000000000000001f4'),
+    rating: 4,
+    comment: 'Komme gerne wieder.',
+    createdAt: ISODate('2026-09-05T14:53:10.558Z')
+  }
+]
+Umsatz pro Event (nur bezahlt, CHF):
+[
+  {
+    revenue: Decimal128('4050'),
+    tickets: 45,
+    event: 'Alpine Rock Festival'
+  },
+  {
+    revenue: Decimal128('2930'),
+    tickets: 30,
+    event: 'Kammermusik Gala'
+  },
+  {
+    revenue: Decimal128('2720'),
+    tickets: 32,
+    event: 'Neon Pop Night'
+  },
+  {
+    revenue: Decimal128('1405'),
+    tickets: 18,
+    event: 'Jazz am Rhein Rückblick'
+  },
+  {
+    revenue: Decimal128('1355'),
+    tickets: 15,
+    event: 'Electronic River'
+  }
+]
+Beliebteste Kategorie pro Stadt (reserviert + bezahlt):
+[
+  {
+    _id: {
+      city: 'Bern',
+      category: 'Sitzplatz'
+    },
+    tickets: 28
+  },
+  {
+    _id: {
+      city: 'Bern',
+      category: 'Stehplatz'
+    },
+    tickets: 24
+  },
+  {
+    _id: {
+      city: 'Bern',
+      category: 'VIP'
+    },
+    tickets: 22
+  },
+  {
+    _id: {
+      city: 'Basel',
+      category: 'Sitzplatz'
+    },
+    tickets: 18
+  },
+  {
+    _id: {
+      city: 'Basel',
+      category: 'Stehplatz'
+    },
+    tickets: 18
+  },
+  {
+    _id: {
+      city: 'Basel',
+      category: 'VIP'
+    },
+    tickets: 18
+  },
+  {
+    _id: {
+      city: 'Zürich',
+      category: 'Sitzplatz'
+    },
+    tickets: 13
+  },
+  {
+    _id: {
+      city: 'Zürich',
+      category: 'Stehplatz'
+    },
+    tickets: 13
+  },
+  {
+    _id: {
+      city: 'Zürich',
+      category: 'VIP'
+    },
+    tickets: 10
+  }
+]
+{
+  label: 'Location+Datum: ohne Index ($natural)',
+  winningPlan: {
+    isCached: false,
+    stage: 'COLLSCAN',
+    filter: {
+      '$and': [
+        {
+          locationId: {
+            '$eq': ObjectId('000000000000000000000065')
+          }
+        },
+        {
+          date: {
+            '$gte': ISODate('2026-09-25T15:01:29.713Z')
+          }
+        }
+      ]
+    },
+    nss: 'eventhub.events',
+    direction: 'forward'
+  },
+  returned: 2,
+  keysExamined: 0,
+  docsExamined: 6
+}
+{
+  label: 'Location+Datum: Compound-Index',
+  winningPlan: {
+    isCached: false,
+    stage: 'FETCH',
+    nss: 'eventhub.events',
+    inputStage: {
+      stage: 'IXSCAN',
+      nss: 'eventhub.events',
+      keyPattern: {
+        locationId: 1,
+        date: 1
+      },
+      indexName: 'location_date',
+      isMultiKey: false,
+      multiKeyPaths: {
+        locationId: [],
+        date: []
+      },
+      isUnique: false,
+      isSparse: false,
+      isPartial: false,
+      indexVersion: 2,
+      direction: 'forward',
+      indexBounds: {
+        locationId: [
+          "[ObjectId('000000000000000000000065'), ObjectId('000000000000000000000065')]"
+        ],
+        date: [
+          '[new Date(1790348489713), new Date(9223372036854775807)]'
+        ]
+      }
+    }
+  },
+  returned: 2,
+  keysExamined: 2,
+  docsExamined: 2
+}
+{
+  label: 'Buchungen: ohne Index',
+  winningPlan: {
+    isCached: false,
+    stage: 'COLLSCAN',
+    filter: {
+      '$and': [
+        {
+          eventId: {
+            '$eq': ObjectId('0000000000000000000001f5')
+          }
+        },
+        {
+          status: {
+            '$eq': 'bezahlt'
+          }
+        }
+      ]
+    },
+    nss: 'eventhub.bookings',
+    direction: 'forward'
+  },
+  returned: 16,
+  keysExamined: 0,
+  docsExamined: 120
+}
+{
+  label: 'Buchungen: event_status',
+  winningPlan: {
+    isCached: false,
+    stage: 'FETCH',
+    nss: 'eventhub.bookings',
+    inputStage: {
+      stage: 'IXSCAN',
+      nss: 'eventhub.bookings',
+      keyPattern: {
+        eventId: 1,
+        status: 1
+      },
+      indexName: 'event_status',
+      isMultiKey: false,
+      multiKeyPaths: {
+        eventId: [],
+        status: []
+      },
+      isUnique: false,
+      isSparse: false,
+      isPartial: false,
+      indexVersion: 2,
+      direction: 'forward',
+      indexBounds: {
+        eventId: [
+          "[ObjectId('0000000000000000000001f5'), ObjectId('0000000000000000000001f5')]"
+        ],
+        status: [
+          '["bezahlt", "bezahlt"]'
+        ]
+      }
+    }
+  },
+  returned: 16,
+  keysExamined: 16,
+  docsExamined: 16
+}
+{
+  label: 'Textindex: Rock',
+  winningPlan: {
+    isCached: false,
+    stage: 'TEXT_MATCH',
+    nss: 'eventhub.events',
+    indexPrefix: {},
+    indexName: 'event_text',
+    parsedTextQuery: {
+      terms: [
+        'rock'
+      ],
+      negatedTerms: [],
+      phrases: [],
+      negatedPhrases: []
+    },
+    textIndexVersion: 3,
+    inputStage: {
+      stage: 'FETCH',
+      nss: 'eventhub.events',
+      inputStage: {
+        stage: 'IXSCAN',
+        nss: 'eventhub.events',
+        keyPattern: {
+          _fts: 'text',
+          _ftsx: 1
+        },
+        indexName: 'event_text',
+        isMultiKey: true,
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'backward',
+        indexBounds: {}
+      }
+    }
+  },
+  returned: 1,
+  keysExamined: 1,
+  docsExamined: 1
+}
+Textsuche benötigt ihren Textindex. Kein semantisch gleicher $natural-Vergleich möglich.
+Hints isolieren den Indexeffekt; bei kleinen Datenmengen darf der Optimizer ohne Hint COLLSCAN wählen.
+Backup im Wartungsfenster: währenddessen keine App/Shell-Schreibzugriffe ausführen.
+Backup-Manifest mit Dokument-Hashes, Indexen und Validatoren geschrieben.
+2026-09-25T17:01:30.246+0200	writing `eventhub.bookings` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.279+0200	writing `eventhub.customers` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.279+0200	writing `eventhub.artists` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.279+0200	writing `eventhub.events` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.282+0200	done dumping `eventhub.artists` (10 documents)
+2026-09-25T17:01:30.282+0200	writing `eventhub.reviews` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.283+0200	done dumping `eventhub.events` (6 documents)
+2026-09-25T17:01:30.283+0200	writing `eventhub.locations` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.283+0200	done dumping `eventhub.bookings` (120 documents)
+2026-09-25T17:01:30.283+0200	writing `eventhub.organizers` to "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.283+0200	done dumping `eventhub.customers` (30 documents)
+2026-09-25T17:01:30.286+0200	done dumping `eventhub.reviews` (5 documents)
+2026-09-25T17:01:30.287+0200	done dumping `eventhub.organizers` (2 documents)
+2026-09-25T17:01:30.289+0200	done dumping `eventhub.locations` (3 documents)
+2026-09-25T17:01:30.652+0200	preparing collections to restore from
+2026-09-25T17:01:30.688+0200	reading metadata for `eventhub_restore_20260925_170129_772.organizers` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.688+0200	reading metadata for `eventhub_restore_20260925_170129_772.artists` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.688+0200	reading metadata for `eventhub_restore_20260925_170129_772.locations` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.688+0200	reading metadata for `eventhub_restore_20260925_170129_772.bookings` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.688+0200	reading metadata for `eventhub_restore_20260925_170129_772.events` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.689+0200	reading metadata for `eventhub_restore_20260925_170129_772.customers` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.689+0200	reading metadata for `eventhub_restore_20260925_170129_772.reviews` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.695+0200	restoring `eventhub_restore_20260925_170129_772.artists` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.706+0200	finished restoring `eventhub_restore_20260925_170129_772.artists` (10 documents, 0 failures)
+2026-09-25T17:01:30.713+0200	restoring `eventhub_restore_20260925_170129_772.events` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.724+0200	finished restoring `eventhub_restore_20260925_170129_772.events` (6 documents, 0 failures)
+2026-09-25T17:01:30.730+0200	restoring `eventhub_restore_20260925_170129_772.bookings` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.741+0200	finished restoring `eventhub_restore_20260925_170129_772.bookings` (120 documents, 0 failures)
+2026-09-25T17:01:30.748+0200	restoring `eventhub_restore_20260925_170129_772.customers` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.758+0200	finished restoring `eventhub_restore_20260925_170129_772.customers` (30 documents, 0 failures)
+2026-09-25T17:01:30.764+0200	restoring `eventhub_restore_20260925_170129_772.reviews` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.774+0200	finished restoring `eventhub_restore_20260925_170129_772.reviews` (5 documents, 0 failures)
+2026-09-25T17:01:30.780+0200	restoring `eventhub_restore_20260925_170129_772.organizers` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.790+0200	finished restoring `eventhub_restore_20260925_170129_772.organizers` (2 documents, 0 failures)
+2026-09-25T17:01:30.797+0200	restoring `eventhub_restore_20260925_170129_772.locations` from "archive `C:\\Users\\Yannick\\Documents\\01-Aplikationsentwickler\\2. Jahr\\02-Unterrichtsmaterial\\02-Module\\165-Modul\\M165_Projekt\\.local\\backups\\20260925-170129-772\\eventhub.archive.gz`"
+2026-09-25T17:01:30.807+0200	finished restoring `eventhub_restore_20260925_170129_772.locations` (3 documents, 0 failures)
+2026-09-25T17:01:30.807+0200	no indexes to restore for collection `eventhub_restore_20260925_170129_772.locations`
+2026-09-25T17:01:30.807+0200	restoring indexes for collection `eventhub_restore_20260925_170129_772.customers` from metadata
+2026-09-25T17:01:30.807+0200	restoring indexes for collection `eventhub_restore_20260925_170129_772.bookings` from metadata
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"event_status", "v":2}, Key:bson.D{bson.E{Key:"eventId", Value:1}, bson.E{Key:"status", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"customer_history", "v":2}, Key:bson.D{bson.E{Key:"customerId", Value:1}, bson.E{Key:"bookedAt", Value:-1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	restoring indexes for collection `eventhub_restore_20260925_170129_772.events` from metadata
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"location_date", "v":2}, Key:bson.D{bson.E{Key:"locationId", Value:1}, bson.E{Key:"date", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"default_language":"german", "language_override":"language", "name":"event_text", "textIndexVersion":3, "v":2, "weights":bson.D{bson.E{Key:"description", Value:1}, bson.E{Key:"title", Value:1}}}, Key:bson.D{bson.E{Key:"_fts", Value:"text"}, bson.E{Key:"_ftsx", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"event_pagination", "v":2}, Key:bson.D{bson.E{Key:"date", Value:1}, bson.E{Key:"_id", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"unique_email", "unique":true, "v":2}, Key:bson.D{bson.E{Key:"email", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.807+0200	restoring indexes for collection `eventhub_restore_20260925_170129_772.reviews` from metadata
+2026-09-25T17:01:30.807+0200	index: &idx.IndexDocument{Options:bson.M{"name":"one_review_per_customer", "unique":true, "v":2}, Key:bson.D{bson.E{Key:"eventId", Value:1}, bson.E{Key:"customerId", Value:1}}, PartialFilterExpression:(*bson.D)(nil)}
+2026-09-25T17:01:30.889+0200	no indexes to restore for collection `eventhub_restore_20260925_170129_772.organizers`
+2026-09-25T17:01:30.889+0200	no indexes to restore for collection `eventhub_restore_20260925_170129_772.artists`
+2026-09-25T17:01:30.910+0200	176 document(s) restored successfully. 0 document(s) failed to restore.
+PASS | Restore artists: 10 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore bookings: 120 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore customers: 30 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore events: 6 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore locations: 3 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore organizers: 2 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore reviews: 5 Dokumente, SHA256, Indexe, Validatoren identisch.
+BACKUP UND RESTORE ERFOLGREICH GEPRÜFT.
+Backup: C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\.local\backups\20260925-170129-772\eventhub.archive.gz
+Getestete Restore-Datenbank: eventhub_restore_20260925_170129_772 (Original bleibt erhalten).
+Vor dem Ausfall: Testdokument mit majority bestätigt.
+Simulierter Serverausfall: localhost:27101 (PID 18592) wird beendet.
+PASS | Primary gewechselt: localhost:27101 -> localhost:27102
+PASS | Vorher bestätigtes Dokument erhalten; neuer majority-Schreibzugriff erfolgreich.
+Failover-Nachweis nach 13.5 Sekunden.
+[
+  {
+    name: 'localhost:27101',
+    stateStr: '(not reachable/healthy)',
+    health: 0
+  },
+  {
+    name: 'localhost:27102',
+    stateStr: 'PRIMARY',
+    health: 1
+  },
+  {
+    name: 'localhost:27103',
+    stateStr: 'SECONDARY',
+    health: 1
+  }
+]
+PASS | Rollback nach Insert
+PASS | Rollback: Bestand unverändert
+PASS | Rollback: keine Buchung gespeichert
+PASS | Unbekannter Kunde abgewiesen
+PASS | Null Tickets abgewiesen
+PASS | Unbekannte Kategorie abgewiesen
+PASS | Parallelbuchung: genau 3 von 10 erfolgreich
+PASS | Kein Überverkauf, Status ausverkauft
+PASS | Storno gibt Platz frei und öffnet Event
+PASS | Doppeltes Storno abgewiesen
+PASS | Reservierung zählt separat
+PASS | Bezahlen verschiebt reserviert zu verkauft
+PASS | Doppelte Zahlung abgewiesen
+PASS | Zukünftiges Event nicht bewertbar
+PASS | Bewertung nach Durchführung gespeichert
+PASS | Doppelte Bewertung verhindert
+PASS | Vergangenes Event nicht buchbar
+PASS | Schema weist ungültige Buchung ab
+PASS | E-Mail-Unique-Index geprüft
+PASS | Paginierung ohne Überschneidung
+PASS | Aggregation: exakt CHF 150 für drei bezahlte Tickets
+ALLE .NET-INTEGRATIONSTESTS BESTANDEN.
+Knoten 27101 wieder gestartet.
+PASS | Drei gesunde Knoten (Primary/Secondary).
+PASS | events: Mindestanzahl 6
+PASS | locations: Mindestanzahl 3
+PASS | artists: Mindestanzahl 10
+PASS | organizers: Mindestanzahl 2
+PASS | customers: Mindestanzahl 30
+PASS | bookings: Mindestanzahl 120
+PASS | reviews: Mindestanzahl 5
+PASS | Sommerklang abgesagt: Location und Veranstalter existieren
+PASS | Sommerklang abgesagt: Künstler existieren
+PASS | Sommerklang abgesagt: Kapazität passt zur Location
+PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/VIP: Bestand konsistent
+PASS | Jazz am Rhein Rückblick: Location und Veranstalter existieren
+PASS | Jazz am Rhein Rückblick: Künstler existieren
+PASS | Jazz am Rhein Rückblick: Kapazität passt zur Location
+PASS | Jazz am Rhein Rückblick/Stehplatz: Bestand konsistent
+PASS | Jazz am Rhein Rückblick/Sitzplatz: Bestand konsistent
+PASS | Jazz am Rhein Rückblick/VIP: Bestand konsistent
+PASS | Neon Pop Night: Location und Veranstalter existieren
+PASS | Neon Pop Night: Künstler existieren
+PASS | Neon Pop Night: Kapazität passt zur Location
+PASS | Neon Pop Night/Stehplatz: Bestand konsistent
+PASS | Neon Pop Night/Sitzplatz: Bestand konsistent
+PASS | Neon Pop Night/VIP: Bestand konsistent
+PASS | Alpine Rock Festival: Location und Veranstalter existieren
+PASS | Alpine Rock Festival: Künstler existieren
+PASS | Alpine Rock Festival: Kapazität passt zur Location
+PASS | Alpine Rock Festival/Stehplatz: Bestand konsistent
+PASS | Alpine Rock Festival/Sitzplatz: Bestand konsistent
+PASS | Alpine Rock Festival/VIP: Bestand konsistent
+PASS | Electronic River: Location und Veranstalter existieren
+PASS | Electronic River: Künstler existieren
+PASS | Electronic River: Kapazität passt zur Location
+PASS | Electronic River/Stehplatz: Bestand konsistent
+PASS | Electronic River/Sitzplatz: Bestand konsistent
+PASS | Electronic River/VIP: Bestand konsistent
+PASS | Kammermusik Gala: Location und Veranstalter existieren
+PASS | Kammermusik Gala: Künstler existieren
+PASS | Kammermusik Gala: Kapazität passt zur Location
+PASS | Kammermusik Gala/Stehplatz: Bestand konsistent
+PASS | Kammermusik Gala/Sitzplatz: Bestand konsistent
+PASS | Kammermusik Gala/VIP: Bestand konsistent
+PASS | Alle Buchungsreferenzen gültig
+PASS | Bewertungen gehören zu besuchten vergangenen Events
+PASS | events: ungültiges Dokument mit Fehler 121 abgewiesen
+PASS | bookings: ungültiges Dokument mit Fehler 121 abgewiesen
+PASS | customers: ungültiges Dokument mit Fehler 121 abgewiesen
+DATEN- UND SCHEMATESTS BESTANDEN.
+GESAMTPRÜFUNG BESTANDEN.
+**********************
+PowerShell transcript end
+End time: 20260925170150
+**********************
