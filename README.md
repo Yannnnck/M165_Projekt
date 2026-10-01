@@ -131,9 +131,5 @@ ausgeschlossen. `.local/` enthält die lokale Datenbank, Zugangsdaten und Backup
 dieser Ordner wird für den Betrieb auf diesem Rechner weiterhin benötigt.
 Auf einem neuen Rechner erstellt `Setup.ps1` die lokale Umgebung neu.
 
-Das Präsentationsvideo wird separat vom Lernenden aufgenommen und gemäss den
-Abgabevorgaben eingereicht. Die Lösung wurde mit KI-Unterstützung umgesetzt;
-technische Aussagen und Tests sind im Repository nachvollziehbar.
-
 Grundlage: [Projektauftrag EventHub](https://github.com/INFEFZ/Modul165/blob/main/G4_Exams/projektauftrag-eventhub-mongodb.md)
 und [Kursunterlagen Modul 165](https://github.com/INFEFZ/Modul165).
