@@ -133,3 +133,8 @@ Auf einem neuen Rechner erstellt `Setup.ps1` die lokale Umgebung neu.
 
 Grundlage: [Projektauftrag EventHub](https://github.com/INFEFZ/Modul165/blob/main/G4_Exams/projektauftrag-eventhub-mongodb.md)
 und [Kursunterlagen Modul 165](https://github.com/INFEFZ/Modul165).
+
+## Ups
+Git-Repository eingerichtet, Commits nachvollziehbar
+
+Ich habe das zu spät gesehen also wo alles schon Fertig war bis auf das Video
