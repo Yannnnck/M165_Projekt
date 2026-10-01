@@ -21,7 +21,7 @@ Die Oberfläche ist bewusst ein einfaches Konsolenmenü entsprechend dem Auftrag
 | Entscheiden | C#/.NET 10 mit offiziellem Treiber; natives Windows-Replica-Set; Kategorien eingebettet, Buchungen referenziert; AO2 und AO5 gewählt. |
 | Realisieren | Reproduzierbares Setup, Validatoren, Seed-Daten, Indexe, Rollen, Shell-Demos und Konsolenanwendung implementiert. Transaktionen für Buchung, Zahlung und Storno ergänzt. |
 | Kontrollieren | Auf echter MongoDB getestet: Rollback, parallele Käufe, Rollen, Datenintegrität, Restore und Prozessausfall. Gefundene Fehler behoben und erneut geprüft. Protokoll liegt unter `docs/evidence/`. |
-| Auswerten | Technisches Fazit und Grenzen unten dokumentiert. Verständnishilfe und Videoablauf vorbereitet. Persönliches Fazit wird nach dem eigenen Durcharbeiten ergänzt. |
+| Auswerten | Testergebnisse ausgewertet und technisches Fazit sowie Grenzen der Lösung dokumentiert. |
 
 Es werden keine rückwirkend geschätzten Arbeitsstunden als echte Zeiterfassung angegeben.
 Lokale Git-Commits gruppieren die tatsächlich erstellten Arbeitsergebnisse.
@@ -98,16 +98,6 @@ Prozessausfall, nicht gegen den Ausfall des gesamten Computers. Die Verkaufsroll
 `readWrite` darf direkte Änderungen ausführen; eine Produktionslösung würde den
 Zugriff über einen Dienst kapseln und stärker eingrenzen. Näheres zu den Grenzen
 steht in `TESTS.md` und `CAP-BASE.md`.
-
-## Persönliche Auswertung vor der Abgabe
-
-Nach den Übungen in `VERSTEHEN.md` in eigenen Worten ergänzen:
-
-- Welche Modellierungsentscheidung kann ich gut erklären?
-- Wo musste ich Code oder MongoDB-Befehle mehrmals durchgehen?
-- Was würde ich bei einer zweiten Umsetzung ändern?
-
-Dieser Abschnitt ist bewusst kein erfundener Erfahrungsbericht des Lernenden.
 
 ## Quellen
 

@@ -90,10 +90,8 @@ eigenen Testdaten anschliessend wieder.
 | --- | --- |
 | [docs/PROJEKT.md](docs/PROJEKT.md) | Einfache Projektdokumentation nach IPERKA und A1–A15-Nachweise |
 | [docs/DATENMODELL.md](docs/DATENMODELL.md) | Grafik, Collections, Beziehungen und Indexe |
-| [docs/VERSTEHEN.md](docs/VERSTEHEN.md) | Erklärung des Codes und Übungen für das Fachgespräch |
 | [docs/CAP-BASE.md](docs/CAP-BASE.md) | Reflexion zu CAP, BASE und Transactions |
 | [docs/SHARDING.md](docs/SHARDING.md) | Optionale Anforderung AO2: Sharding-Konzept |
-| [docs/VIDEO.md](docs/VIDEO.md) | Ablauf und Befehle für die ca. 20-minütige Präsentation |
 | [docs/TESTS.md](docs/TESTS.md) | Testfälle, Ergebnisse und Grenzen |
 | [docs/evidence/latest-test.txt](docs/evidence/latest-test.txt) | Tatsächliches Protokoll des letzten Gesamttests |
 | `mongodb/` | Alle mongosh-Befehle als JavaScript-Dateien |
@@ -120,11 +118,22 @@ Bei sehr häufigen Testläufen können sie später bewusst mit Compass entfernt 
 
 ## Abgabe
 
-Code, Skripte und Markdown-Dokumentation liegen im lokalen Git-Repository.
-Der GitHub-Upload folgt später. Das Präsentationsvideo und das persönliche Fazit
-nach dem eigenen Durcharbeiten erstellt der Lernende selbst. Die Lösung wurde mit
-KI-Unterstützung umgesetzt; technische Aussagen und Tests sind im Repository
-nachvollziehbar. Es werden keine persönlichen Lernerfahrungen oder Arbeitszeiten erfunden.
+Zum GitHub-Repository gehören:
+
+- `src/EventHub/`: C#-Quellcode, Projektdatei und festgehaltene Paketversionen.
+- `mongodb/`: Datenbankschema, Testdaten, Abfragen und Administrationsbefehle.
+- `scripts/`: Reproduzierbares Setup, Anwendungsstart und Tests.
+- `docs/`: Projektdokumentation, Datenmodell-Grafik und Testnachweise.
+- `README.md`, `global.json`, `.gitignore` und `.gitattributes`: Startanleitung und Projektkonfiguration.
+
+`.local/`, `bin/` und `obj/` gehören nicht zur Abgabe und sind durch `.gitignore`
+ausgeschlossen. `.local/` enthält die lokale Datenbank, Zugangsdaten und Backups;
+dieser Ordner wird für den Betrieb auf diesem Rechner weiterhin benötigt.
+Auf einem neuen Rechner erstellt `Setup.ps1` die lokale Umgebung neu.
+
+Das Präsentationsvideo wird separat vom Lernenden aufgenommen und gemäss den
+Abgabevorgaben eingereicht. Die Lösung wurde mit KI-Unterstützung umgesetzt;
+technische Aussagen und Tests sind im Repository nachvollziehbar.
 
 Grundlage: [Projektauftrag EventHub](https://github.com/INFEFZ/Modul165/blob/main/G4_Exams/projektauftrag-eventhub-mongodb.md)
 und [Kursunterlagen Modul 165](https://github.com/INFEFZ/Modul165).
