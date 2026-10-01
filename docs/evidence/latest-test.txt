@@ -1,12 +1,12 @@
 ﻿**********************
 nStart der Windows PowerShell-Aufzeichnung
-Startzeit: 20261001234837
+Startzeit: 20261002005449
 Benutzername: YANNICK\Yannick
 RunAs-Benutzer: YANNICK\Yannick
 Konfigurationsname:
 Computer: YANNICK (Microsoft Windows NT 10.0.26200.0)
 Hostanwendung: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
-Prozess-ID: 10608
+Prozess-ID: 8788
 PSVersion: 5.1.26100.9444
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
@@ -17,14 +17,14 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
   Wiederherzustellende Projekte werden ermittelt...
-  "C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\src\EventHub\EventHub.csproj" wiederhergestellt (in 643 ms.).
+  "C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\src\EventHub\EventHub.csproj" wiederhergestellt (in 858 ms.).
   EventHub -> C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\src\EventHub\bin\Debug\net10.0\EventHub.dll
 
 Der Buildvorgang wurde erfolgreich ausgef├╝hrt.
     0 Warnung(en)
     0 Fehler
 
-Verstrichene Zeit 00:00:01.31
+Verstrichene Zeit 00:00:01.59
 PASS | events: Mindestanzahl 6
 PASS | locations: Mindestanzahl 3
 PASS | artists: Mindestanzahl 10
@@ -32,12 +32,6 @@ PASS | organizers: Mindestanzahl 2
 PASS | customers: Mindestanzahl 30
 PASS | bookings: Mindestanzahl 120
 PASS | reviews: Mindestanzahl 5
-PASS | Sommerklang abgesagt: Location und Veranstalter existieren
-PASS | Sommerklang abgesagt: K├╝nstler existieren
-PASS | Sommerklang abgesagt: Kapazit├ñt passt zur Location
-PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
-PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
-PASS | Sommerklang abgesagt/VIP: Bestand konsistent
 PASS | Jazz am Rhein R├╝ckblick: Location und Veranstalter existieren
 PASS | Jazz am Rhein R├╝ckblick: K├╝nstler existieren
 PASS | Jazz am Rhein R├╝ckblick: Kapazit├ñt passt zur Location
@@ -68,6 +62,16 @@ PASS | Kammermusik Gala: Kapazit├ñt passt zur Location
 PASS | Kammermusik Gala/Stehplatz: Bestand konsistent
 PASS | Kammermusik Gala/Sitzplatz: Bestand konsistent
 PASS | Kammermusik Gala/VIP: Bestand konsistent
+PASS | Sommerklang abgesagt: Location und Veranstalter existieren
+PASS | Sommerklang abgesagt: K├╝nstler existieren
+PASS | Sommerklang abgesagt: Kapazit├ñt passt zur Location
+PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/VIP: Bestand konsistent
+PASS | Test: Location und Veranstalter existieren
+PASS | Test: K├╝nstler existieren
+PASS | Test: Kapazit├ñt passt zur Location
+PASS | Test/Stehplatz: Bestand konsistent
 PASS | Alle Buchungsreferenzen g├╝ltig
 PASS | Bewertungen geh├Âren zu besuchten vergangenen Events
 PASS | events: ung├╝ltiges Dokument mit Fehler 121 abgewiesen
@@ -77,18 +81,18 @@ DATEN- UND SCHEMATESTS BESTANDEN.
 CREATE: insertOne + insertMany
 READ: findOne + find
 {
-  _id: ObjectId('6abed53838f705ae30287a0d'),
+  _id: ObjectId('6abee4bb5ce58b89cf7e9e24'),
   name: 'CRUD Demo Solo',
   genre: 'Pop'
 }
 [
   {
-    _id: ObjectId('6abed53838f705ae30287a0e'),
+    _id: ObjectId('6abee4bb5ce58b89cf7e9e25'),
     name: 'CRUD Demo Duo',
     genre: 'Rock'
   },
   {
-    _id: ObjectId('6abed53838f705ae30287a0f'),
+    _id: ObjectId('6abee4bb5ce58b89cf7e9e26'),
     name: 'CRUD Demo Trio',
     genre: 'Jazz'
   }
@@ -117,7 +121,7 @@ DELETE: deleteOne + deleteMany
   acknowledged: true,
   deletedCount: 2
 }
-PASS | Reporting liest 6 Events.
+PASS | Reporting liest 7 Events.
 PASS | Reporting-Schreibzugriff mit Unauthorized (13) abgewiesen.
 PASS | Verkauf darf Daten schreiben.
 PASS | Verkauf darf Benutzer nicht auflisten.
@@ -260,6 +264,46 @@ ALLE .NET-INTEGRATIONSTESTS BESTANDEN.
 4. Bezahlte Buchungen mit mindestens 2 Tickets ($gte):
 [
   {
+    _id: ObjectId('0000000000000000000003e9'),
+    customerId: ObjectId('000000000000000000000191'),
+    eventId: ObjectId('0000000000000000000001f5'),
+    category: 'Stehplatz',
+    quantity: 2,
+    unitPrice: Decimal128('50'),
+    bookedAt: ISODate('2026-07-28T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003ea'),
+    customerId: ObjectId('000000000000000000000192'),
+    eventId: ObjectId('0000000000000000000001f6'),
+    category: 'Stehplatz',
+    quantity: 3,
+    unitPrice: Decimal128('55'),
+    bookedAt: ISODate('2026-07-29T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003ec'),
+    customerId: ObjectId('000000000000000000000194'),
+    eventId: ObjectId('0000000000000000000001f8'),
+    category: 'Stehplatz',
+    quantity: 2,
+    unitPrice: Decimal128('65'),
+    bookedAt: ISODate('2026-07-31T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
+    _id: ObjectId('0000000000000000000003f0'),
+    customerId: ObjectId('000000000000000000000198'),
+    eventId: ObjectId('0000000000000000000001f6'),
+    category: 'Sitzplatz',
+    quantity: 3,
+    unitPrice: Decimal128('90'),
+    bookedAt: ISODate('2026-08-04T14:53:10.558Z'),
+    status: 'bezahlt'
+  },
+  {
     _id: ObjectId('0000000000000000000003f2'),
     customerId: ObjectId('00000000000000000000019a'),
     eventId: ObjectId('0000000000000000000001f8'),
@@ -268,64 +312,24 @@ ALLE .NET-INTEGRATIONSTESTS BESTANDEN.
     unitPrice: Decimal128('100'),
     bookedAt: ISODate('2026-08-06T14:53:10.558Z'),
     status: 'bezahlt'
-  },
-  {
-    _id: ObjectId('000000000000000000000434'),
-    customerId: ObjectId('0000000000000000000001a0'),
-    eventId: ObjectId('0000000000000000000001f8'),
-    category: 'Stehplatz',
-    quantity: 2,
-    unitPrice: Decimal128('65'),
-    bookedAt: ISODate('2026-08-12T14:53:10.558Z'),
-    status: 'bezahlt'
-  },
-  {
-    _id: ObjectId('00000000000000000000043d'),
-    customerId: ObjectId('0000000000000000000001a9'),
-    eventId: ObjectId('0000000000000000000001f5'),
-    category: 'VIP',
-    quantity: 2,
-    unitPrice: Decimal128('120'),
-    bookedAt: ISODate('2026-08-01T14:53:10.558Z'),
-    status: 'bezahlt'
-  },
-  {
-    _id: ObjectId('00000000000000000000045b'),
-    customerId: ObjectId('0000000000000000000001a9'),
-    eventId: ObjectId('0000000000000000000001f5'),
-    category: 'Sitzplatz',
-    quantity: 2,
-    unitPrice: Decimal128('85'),
-    bookedAt: ISODate('2026-08-11T14:53:10.558Z'),
-    status: 'bezahlt'
-  },
-  {
-    _id: ObjectId('0000000000000000000003f8'),
-    customerId: ObjectId('0000000000000000000001a0'),
-    eventId: ObjectId('0000000000000000000001f8'),
-    category: 'VIP',
-    quantity: 2,
-    unitPrice: Decimal128('135'),
-    bookedAt: ISODate('2026-08-12T14:53:10.558Z'),
-    status: 'bezahlt'
   }
 ]
 5. Bewertungen mit mindestens 4 Sternen:
 [
-  {
-    _id: ObjectId('0000000000000000000007d2'),
-    customerId: ObjectId('00000000000000000000019c'),
-    eventId: ObjectId('0000000000000000000001f4'),
-    rating: 5,
-    comment: 'Sehr sch├Ânes Konzert.',
-    createdAt: ISODate('2026-09-05T14:53:10.558Z')
-  },
   {
     _id: ObjectId('0000000000000000000007d1'),
     customerId: ObjectId('000000000000000000000196'),
     eventId: ObjectId('0000000000000000000001f4'),
     rating: 4,
     comment: 'Guter Sound und freundliches Team.',
+    createdAt: ISODate('2026-09-05T14:53:10.558Z')
+  },
+  {
+    _id: ObjectId('0000000000000000000007d2'),
+    customerId: ObjectId('00000000000000000000019c'),
+    eventId: ObjectId('0000000000000000000001f4'),
+    rating: 5,
+    comment: 'Sehr sch├Ânes Konzert.',
     createdAt: ISODate('2026-09-05T14:53:10.558Z')
   },
   {
@@ -445,7 +449,7 @@ Beliebteste Kategorie pro Stadt (reserviert + bezahlt):
         },
         {
           date: {
-            '$gte': ISODate('2026-10-01T21:48:43.209Z')
+            '$gte': ISODate('2026-10-01T22:54:55.388Z')
           }
         }
       ]
@@ -455,7 +459,7 @@ Beliebteste Kategorie pro Stadt (reserviert + bezahlt):
   },
   returned: 2,
   keysExamined: 0,
-  docsExamined: 6
+  docsExamined: 7
 }
 {
   label: 'Location+Datum: Compound-Index',
@@ -486,7 +490,7 @@ Beliebteste Kategorie pro Stadt (reserviert + bezahlt):
           "[ObjectId('000000000000000000000065'), ObjectId('000000000000000000000065')]"
         ],
         date: [
-          '[new Date(1790891323209), new Date(9223372036854775807)]'
+          '[new Date(1790895295388), new Date(9223372036854775807)]'
         ]
       }
     }
@@ -519,7 +523,7 @@ Beliebteste Kategorie pro Stadt (reserviert + bezahlt):
   },
   returned: 16,
   keysExamined: 0,
-  docsExamined: 121
+  docsExamined: 123
 }
 {
   label: 'Buchungen: event_status',
@@ -606,34 +610,34 @@ Hints isolieren den Indexeffekt; bei kleinen Datenmengen darf der Optimizer ohne
 Backup im Wartungsfenster: wÃ¤hrenddessen keine App/Shell-Schreibzugriffe ausfÃ¼hren.
 Backup-Manifest mit Dokument-Hashes, Indexen und Validatoren geschrieben.
 PASS | Restore artists: 10 Dokumente, SHA256, Indexe, Validatoren identisch.
-PASS | Restore bookings: 121 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore bookings: 123 Dokumente, SHA256, Indexe, Validatoren identisch.
 PASS | Restore customers: 30 Dokumente, SHA256, Indexe, Validatoren identisch.
-PASS | Restore events: 6 Dokumente, SHA256, Indexe, Validatoren identisch.
+PASS | Restore events: 7 Dokumente, SHA256, Indexe, Validatoren identisch.
 PASS | Restore locations: 3 Dokumente, SHA256, Indexe, Validatoren identisch.
 PASS | Restore organizers: 2 Dokumente, SHA256, Indexe, Validatoren identisch.
 PASS | Restore reviews: 5 Dokumente, SHA256, Indexe, Validatoren identisch.
 BACKUP UND RESTORE ERFOLGREICH GEPR├£FT.
-Backup: C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\.local\backups\20261001-234843-252\eventhub.archive.gz
-Getestete Restore-Datenbank: eventhub_restore_20261001_234843_252 (Original bleibt erhalten).
+Backup: C:\Users\Yannick\Documents\01-Aplikationsentwickler\2. Jahr\02-Unterrichtsmaterial\02-Module\165-Modul\M165_Projekt\.local\backups\20261002-005455-439\eventhub.archive.gz
+Getestete Restore-Datenbank: eventhub_restore_20261002_005455_439 (Original bleibt erhalten).
 Vor dem Ausfall: Testdokument mit majority best├ñtigt.
-Simulierter Serverausfall: localhost:27102 (PID 24896) wird beendet.
-PASS | Primary gewechselt: localhost:27102 -> localhost:27101
+Simulierter Serverausfall: localhost:27101 (PID 25060) wird beendet.
+PASS | Primary gewechselt: localhost:27101 -> localhost:27103
 PASS | Vorher best├ñtigtes Dokument erhalten; neuer majority-Schreibzugriff erfolgreich.
-Failover-Nachweis nach 13.5 Sekunden.
+Failover-Nachweis nach 12.7 Sekunden.
 [
   {
     name: 'localhost:27101',
-    stateStr: 'PRIMARY',
-    health: 1
-  },
-  {
-    name: 'localhost:27102',
     stateStr: '(not reachable/healthy)',
     health: 0
   },
   {
-    name: 'localhost:27103',
+    name: 'localhost:27102',
     stateStr: 'SECONDARY',
+    health: 1
+  },
+  {
+    name: 'localhost:27103',
+    stateStr: 'PRIMARY',
     health: 1
   }
 ]
@@ -659,7 +663,7 @@ PASS | E-Mail-Unique-Index gepr├╝ft
 PASS | Paginierung ohne ├£berschneidung
 PASS | Aggregation: exakt CHF 150 f├╝r drei bezahlte Tickets
 ALLE .NET-INTEGRATIONSTESTS BESTANDEN.
-Knoten 27102 wieder gestartet.
+Knoten 27101 wieder gestartet.
 PASS | Drei gesunde Knoten (Primary/Secondary).
 PASS | events: Mindestanzahl 6
 PASS | locations: Mindestanzahl 3
@@ -668,18 +672,12 @@ PASS | organizers: Mindestanzahl 2
 PASS | customers: Mindestanzahl 30
 PASS | bookings: Mindestanzahl 120
 PASS | reviews: Mindestanzahl 5
-PASS | Jazz am Rhein R├╝ckblick: Location und Veranstalter existieren
-PASS | Jazz am Rhein R├╝ckblick: K├╝nstler existieren
-PASS | Jazz am Rhein R├╝ckblick: Kapazit├ñt passt zur Location
-PASS | Jazz am Rhein R├╝ckblick/Stehplatz: Bestand konsistent
-PASS | Jazz am Rhein R├╝ckblick/Sitzplatz: Bestand konsistent
-PASS | Jazz am Rhein R├╝ckblick/VIP: Bestand konsistent
-PASS | Neon Pop Night: Location und Veranstalter existieren
-PASS | Neon Pop Night: K├╝nstler existieren
-PASS | Neon Pop Night: Kapazit├ñt passt zur Location
-PASS | Neon Pop Night/Stehplatz: Bestand konsistent
-PASS | Neon Pop Night/Sitzplatz: Bestand konsistent
-PASS | Neon Pop Night/VIP: Bestand konsistent
+PASS | Sommerklang abgesagt: Location und Veranstalter existieren
+PASS | Sommerklang abgesagt: K├╝nstler existieren
+PASS | Sommerklang abgesagt: Kapazit├ñt passt zur Location
+PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
+PASS | Sommerklang abgesagt/VIP: Bestand konsistent
 PASS | Alpine Rock Festival: Location und Veranstalter existieren
 PASS | Alpine Rock Festival: K├╝nstler existieren
 PASS | Alpine Rock Festival: Kapazit├ñt passt zur Location
@@ -692,18 +690,28 @@ PASS | Electronic River: Kapazit├ñt passt zur Location
 PASS | Electronic River/Stehplatz: Bestand konsistent
 PASS | Electronic River/Sitzplatz: Bestand konsistent
 PASS | Electronic River/VIP: Bestand konsistent
+PASS | Neon Pop Night: Location und Veranstalter existieren
+PASS | Neon Pop Night: K├╝nstler existieren
+PASS | Neon Pop Night: Kapazit├ñt passt zur Location
+PASS | Neon Pop Night/Stehplatz: Bestand konsistent
+PASS | Neon Pop Night/Sitzplatz: Bestand konsistent
+PASS | Neon Pop Night/VIP: Bestand konsistent
+PASS | Jazz am Rhein R├╝ckblick: Location und Veranstalter existieren
+PASS | Jazz am Rhein R├╝ckblick: K├╝nstler existieren
+PASS | Jazz am Rhein R├╝ckblick: Kapazit├ñt passt zur Location
+PASS | Jazz am Rhein R├╝ckblick/Stehplatz: Bestand konsistent
+PASS | Jazz am Rhein R├╝ckblick/Sitzplatz: Bestand konsistent
+PASS | Jazz am Rhein R├╝ckblick/VIP: Bestand konsistent
 PASS | Kammermusik Gala: Location und Veranstalter existieren
 PASS | Kammermusik Gala: K├╝nstler existieren
 PASS | Kammermusik Gala: Kapazit├ñt passt zur Location
 PASS | Kammermusik Gala/Stehplatz: Bestand konsistent
 PASS | Kammermusik Gala/Sitzplatz: Bestand konsistent
 PASS | Kammermusik Gala/VIP: Bestand konsistent
-PASS | Sommerklang abgesagt: Location und Veranstalter existieren
-PASS | Sommerklang abgesagt: K├╝nstler existieren
-PASS | Sommerklang abgesagt: Kapazit├ñt passt zur Location
-PASS | Sommerklang abgesagt/Stehplatz: Bestand konsistent
-PASS | Sommerklang abgesagt/Sitzplatz: Bestand konsistent
-PASS | Sommerklang abgesagt/VIP: Bestand konsistent
+PASS | Test: Location und Veranstalter existieren
+PASS | Test: K├╝nstler existieren
+PASS | Test: Kapazit├ñt passt zur Location
+PASS | Test/Stehplatz: Bestand konsistent
 PASS | Alle Buchungsreferenzen g├╝ltig
 PASS | Bewertungen geh├Âren zu besuchten vergangenen Events
 PASS | events: ung├╝ltiges Dokument mit Fehler 121 abgewiesen
@@ -713,5 +721,5 @@ DATEN- UND SCHEMATESTS BESTANDEN.
 GESAMTPRÃœFUNG BESTANDEN.
 **********************
 Ende der Windows PowerShell-Aufzeichnung
-Endzeit: 20261001234902
+Endzeit: 20261002005514
 **********************
